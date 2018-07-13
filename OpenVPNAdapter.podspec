@@ -30,6 +30,6 @@ The framework is designed to use in conjunction with NetworkExtension framework 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'NetworkExtension', 'SystemConfiguration'
   # s.dependency 'JSONModel'
-  s.dependency 'mbedtls'
+  s.dependency 'mbedTLS'
   s.module_name = 'OpenVPN'
 end
