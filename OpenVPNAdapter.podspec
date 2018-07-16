@@ -26,11 +26,11 @@ The framework is designed to use in conjunction with NetworkExtension framework 
 
   s.source = { :http => 'https://github.com/MeGaPk/OpenVPNAdapter/releases/download/v0.0.1/OpenVPNAdapter.framework.zip' }
 
-  # spec.vendored_frameworks = 'OpenVPNAdapter.framework'
+  s.source_files = 'OpenVPNAdapter.framework/Headers/*.h'
+  s.public_header_files = 'OpenVPNAdapter.framework/Headers/*.h'
   s.vendored_frameworks = 'OpenVPNAdapter.framework'
-  # s.source_files = 'OpenVPN Adapter/**/*'
-  # s.exclude_files = 'OpenVPN Adapter/Vendors/'
-  # s.ios.public_header_files = 'OpenVPNAdapter.framework/Headers/*.h'
+
   s.frameworks = 'NetworkExtension', 'SystemConfiguration'
-  # s.module_name = 'OpenVPNAdapter'
+  s.static_framework = true
+  s.module_name = 'OpenVPNAdapter'
 end
