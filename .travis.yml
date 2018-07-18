@@ -3,9 +3,6 @@ if: tag IS present
 language: objective-c
 osx_image: xcode9.4
 xcode_project: "OpenVPN Adapter.xcodeproj"
-# xcode_workspace: <WORKSPACE_PLACEHOLDER>
-# xcode_scheme: "scheme"
-# xcode_sdk: iphonesimulator9.3
 env:
   global:
     - FRAMEWORK_NAME=OpenVPNAdapter
@@ -19,15 +16,15 @@ before_script:
   # you can remove if you don't have dependencies
   # - carthage bootstrap
 script:
-  - carthage update
-  - zip -r "open_vpn_adapter_ios.zip" Carthage/Build/iOS/OpenVPNAdapter.framework/
-  - zip -r "open_vpn_adapter_osx.zip" Carthage/Build/Mac/OpenVPNAdapter.framework/
+  - carthage update --no-use-binaries
+  - mkdir -p ios osx
+  - mv Carthage/Build/iOS/OpenVPNAdapter.framework/ ios/
+  - mv Carthage/Build/Mac/OpenVPNAdapter.framework/ osx/
+  - zip -r "OpenVPNAdapter.framework.zip" ios/ osx/
 deploy:
   provider: releases
   api_key: $GITHUB_RELEASE_KEY
-  file:
-      - open_vpn_adapter_ios.zip
-      - open_vpn_adapter_osx.zip
+  file: OpenVPNAdapter.framework.zip
   skip_cleanup: true
   on:
     tags: true
