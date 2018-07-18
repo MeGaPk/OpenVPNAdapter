@@ -1,3 +1,5 @@
+# Only build tags
+if: tag IS present
 language: objective-c
 osx_image: xcode9.4
 xcode_project: "OpenVPN Adapter.xcodeproj"
@@ -22,8 +24,7 @@ script:
   - zip -r "open_vpn_adapter_osx.zip" Carthage/Build/Mac/OpenVPNAdapter.framework/
 deploy:
   provider: releases
-  api_key:
-    secure: $github_release_api_key
+  api_key: $GITHUB_RELEASE_KEY
   file:
       - open_vpn_adapter_ios.zip
       - open_vpn_adapter_osx.zip
