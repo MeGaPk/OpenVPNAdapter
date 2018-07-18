@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'OpenVPNAdapter'
-  s.version          = '0.0.8'
+  s.version          = '0.0.9'
   s.summary          = 'OpenVPNAdapter is an Objective-C framework that allows to easily configure and establish VPN connection using OpenVPN protocol'
 s
   s.description      = <<-DESC
@@ -24,15 +24,15 @@ The framework is designed to use in conjunction with NetworkExtension framework 
   s.ios.deployment_target = '9.0'
   s.osx.deployment_target = '10.11'
 
-  s.source = { :http => 'https://github.com/MeGaPk/OpenVPNAdapter/releases/download/v0.0.8/OpenVPNAdapter.framework.zip' }
+  s.source = { :http => 'https://github.com/MeGaPk/OpenVPNAdapter/releases/download/v0.0.9/OpenVPNAdapter.framework.zip' }
 
-  s.ios.source_files = 'OpenVPNAdapter.framework/Headers/*.h'
-  s.ios.public_header_files = 'OpenVPNAdapter.framework/Headers/*.h'
-  s.ios.vendored_frameworks = 'OpenVPNAdapter.framework'
+  s.ios.source_files = 'ios/OpenVPNAdapter.framework/Headers/*.h'
+  s.ios.public_header_files = 'ios/OpenVPNAdapter.framework/Headers/*.h'
+  s.ios.vendored_frameworks = 'ios/OpenVPNAdapter.framework'
 
-  s.osx.source_files = 'OpenVPNAdapter.framework/Headers/*.h'
-  s.osx.public_header_files = 'OpenVPNAdapter.framework/Headers/*.h'
-  s.osx.vendored_frameworks = 'OpenVPNAdapter.framework'
+  s.osx.source_files = 'osx/OpenVPNAdapter.framework/Versions/A/Headers/*.h'
+  s.osx.public_header_files = 'osx/OpenVPNAdapter.framework/Versions/A/Headers/*.h'
+  s.osx.vendored_frameworks = 'osx/OpenVPNAdapter.framework'
 
   s.frameworks = 'NetworkExtension', 'SystemConfiguration'
   # s.static_framework = true
