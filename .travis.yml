@@ -32,3 +32,5 @@ deploy:
   on:
     tags: true
     repo: MeGaPk/OpenVPNAdapter
+# after_deploy:
+# TODO: here need put some code for release podspec file to cocoapods official repository
