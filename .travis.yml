@@ -20,7 +20,7 @@ script:
   - mkdir -p ios osx
   - mv Carthage/Build/iOS/OpenVPNAdapter.framework/ ios/
   - mv Carthage/Build/Mac/OpenVPNAdapter.framework/ osx/
-  - zip -r "OpenVPNAdapter.framework.zip" ios/ osx/
+  - zip -r "OpenVPNAdapter.framework.zip" ios/ osx/ LICENSE
 deploy:
   provider: releases
   api_key: $GITHUB_RELEASE_KEY

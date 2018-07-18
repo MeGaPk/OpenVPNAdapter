@@ -26,13 +26,13 @@ The framework is designed to use in conjunction with NetworkExtension framework 
 
   s.source = { :http => 'https://github.com/MeGaPk/OpenVPNAdapter/releases/download/v%VERSION%/OpenVPNAdapter.framework.zip' }
 
-  s.ios.source_files = 'OpenVPNAdapter.framework/Headers/*.h'
-  s.ios.public_header_files = 'OpenVPNAdapter.framework/Headers/*.h'
-  s.ios.vendored_frameworks = 'OpenVPNAdapter.framework'
+  s.ios.source_files = 'ios/OpenVPNAdapter.framework/Headers/*.h'
+  s.ios.public_header_files = 'ios/OpenVPNAdapter.framework/Headers/*.h'
+  s.ios.vendored_frameworks = 'ios/OpenVPNAdapter.framework'
 
-  s.osx.source_files = 'OpenVPNAdapter.framework/Headers/*.h'
-  s.osx.public_header_files = 'OpenVPNAdapter.framework/Headers/*.h'
-  s.osx.vendored_frameworks = 'OpenVPNAdapter.framework'
+  s.osx.source_files = 'osx/OpenVPNAdapter.framework/Versions/A/Headers/*.h'
+  s.osx.public_header_files = 'osx/OpenVPNAdapter.framework/Versions/A/Headers/*.h'
+  s.osx.vendored_frameworks = 'osx/OpenVPNAdapter.framework'
 
   s.frameworks = 'NetworkExtension', 'SystemConfiguration'
   # s.static_framework = true
