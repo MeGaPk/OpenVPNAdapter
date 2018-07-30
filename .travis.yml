@@ -20,6 +20,8 @@ script:
   - mkdir -p ios osx
   - mv Carthage/Build/iOS/OpenVPNAdapter.framework/ ios/
   - mv Carthage/Build/Mac/OpenVPNAdapter.framework/ osx/
+  - mv Carthage/Build/iOS/OpenVPNAdapter.framework.dSYM/ ios/
+  - mv Carthage/Build/Mac/OpenVPNAdapter.framework.dSYM/ osx/
   - zip --symlinks -r "OpenVPNAdapter.framework.zip" ios/ osx/ LICENSE
 deploy:
   provider: releases
